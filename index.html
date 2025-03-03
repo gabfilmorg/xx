@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filmORG - Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --deep-lavender: #7761A9;
+            --dark-slate-blue: #7761A9;
+            --pearl-bush: #DEDEDE;
+            --lapis-blue: #25336E;
+            --midnight: #130F3A;
+            --seafoam-blue: #72CBD7;
+            --lavender-purple: #8474B7;
+            
+            --background: var(--pearl-bush);
+            --text-primary: var(--midnight);
+            --text-secondary: var(--lapis-blue);
+            --accent: var(--seafoam-blue);
+            --secondary-accent: var(--lavender-purple);
+            
+            --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .auth-card {
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .auth-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--midnight);
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .auth-logo span {
+            color: var(--accent);
+        }
+
+        .auth-form {
+            text-align: left;
+        }
+
+        .auth-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        .auth-footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .auth-link {
+            color: var(--accent);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .auth-link:hover {
+            text-decoration: underline;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: var(--radius);
+            border: 1px solid #e0e0e0;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: var(--radius);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            outline: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--midnight);
+        }
+
+        .btn-primary:hover {
+            background-color: #5fb2bd;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-logo">film<span>ORG</span></div>
+            <h2 class="auth-title">Faça login na sua conta</h2>
+            
+            <form class="auth-form">
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" id="login-email" placeholder="seu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="login-password" placeholder="Sua senha" required>
+                </div>
+                
+                <div class="form-group" style="text-align: right;">
+                    <a href="#" class="auth-link">Esqueceu sua senha?</a>
+                </div>
+                
+                <button type="button" class="btn btn-primary btn-block" id="login-btn" onclick="window.location.href='dashboard.html'">Entrar</button>
+            </form>
+            
+            <div class="auth-footer">
+                Ainda não tem uma conta? <a href="signup.html" class="auth-link">Criar conta</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
